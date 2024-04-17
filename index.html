@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px; /* Espaçamento interno */
+            background-image: url('img/mago.png'); /* Imagem de plano de fundo */
+            background-size: cover; /* Cobrir todo o contêiner */
+            background-position: center; /* Centralizar a imagem */
+        }
+
+        .left-login {
+            width: 50%; /* Define a largura da parte do login */
+            position: relative; /* Para permitir a posição absoluta da imagem */
+        }
+
+        .left-login::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(52, 152, 219, 0.5); /* Cor azul com transparência */
+            z-index: -1; /* Coloca a sobreposição atrás da imagem */
+        }
+
+        .left-login h1 {
+            color: white; /* Cor do texto branco para contrastar com o fundo azul */
+        }
+
+        .left-login-image {
+            display: none; /* Oculta a imagem */
+        }
+
+        .right-login {
+            width: 50%; /* Define a largura da parte do formulário */
+        }
+    </style>
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left-login">
+            <h1><br></h1>
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <div class="textfield">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" id="usuario" placeholder="Usuário">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Senha">
+                </div>
+                <button class="btn-login" onclick="login()">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            var usuario = document.getElementById("usuario").value;
+            var senha = document.getElementById("senha").value;
+
+            // Verifica se o usuário e a senha estão corretos
+            if (usuario === "Admin" && senha === "Mortex01!") {
+                // Redireciona para a página index.html
+                window.location.href = "puxada.html";
+            } else {
+                // Exibe uma mensagem de erro
+                alert("Usuário ou senha incorretos. Tente novamente.");
+            }
+        }
+    </script>
+</body>
+</html>

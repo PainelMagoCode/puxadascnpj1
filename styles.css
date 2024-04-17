@@ -1,0 +1,45 @@
+/* styles.css */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.cnpj-form {
+    background-image: url("images/sunset.png"); /* https://th.bing.com/th/id/R.a3675a815e1107adaa56f77c8d6faddc?rik=sJGrB52saahCfQ&pid=ImgRaw&r=0 */
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.cnpj-form h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.cnpj-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.cnpj-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.cnpj-form button {
+    background-color: #ff5733;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
